@@ -75,6 +75,15 @@
 	</dependencies>
 
 	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**/*.properties</include>
+				</includes>
+				<filtering>false</filtering> <!-- Evita alterações no arquivo -->
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -90,5 +99,6 @@
 			</plugin>
 		</plugins>
 	</build>
+
 
 </project>
